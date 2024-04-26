@@ -1,13 +1,16 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
 
   const {signInUser, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
 
   const [loginError, setLoginError] = useState('')
+
+  // Location
+  const location = useLocation();
 
   const navigate = useNavigate();
 
@@ -26,8 +29,7 @@ const Login = () => {
     console.log(result.user);
     toast.success('User logged in Successfully!')
     e.target.reset();
-    // navigate(location?.state ? location.state : '/' );
-    navigate('/');
+    navigate(location?.state ? location.state : '/' );
   })
   .catch(error => {
     console.error(error);
@@ -42,6 +44,7 @@ const handleGoogleSignIn = () => {
   .then(result => {
     console.log(result.user)
     toast.success('Google Login Successful!')
+    navigate(location?.state ? location.state : '/' );
   })
   .catch(error => {
     console.error(error)
@@ -52,7 +55,8 @@ const handleGithubSignIn = () => {
   signInWithGithub()
   .then(result => {
     console.log(result.user)
-    toast.success('Github Login Successful!')
+    toast.success('Github Login Successful!');
+     navigate(location?.state ? location.state : '/' );
   })
   .catch(error => {
     console.error(error)
@@ -61,7 +65,7 @@ const handleGithubSignIn = () => {
 
 
   return (
-    <div className="bg-gray-600">
+    <div className="bg-gray-600 md:mt-0 mt-64">
       {" "}
       <div className="p-8 lg:w-1/2 mx-auto">
         {" "}

@@ -6,11 +6,15 @@ import Login from "../Pages/Login/Login";
 import AllSpots from "../Pages/AllSpots/AllSpots";
 import AddSpots from "../Pages/AddSpots/AddSpots";
 import MyList from "../Pages/MyList/MyList";
+import ErrorElement from "../Pages/ErrorElement/ErrorElement";
+import UpdatedUser from "../Pages/UpdatedUser/UpdatedUser";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
       path: '/',
       element: <Root></Root>,
+      errorElement: <ErrorElement></ErrorElement>,
       children: [
         {
             path: '/',
@@ -35,6 +39,10 @@ const router = createBrowserRouter([
         {
             path: '/login',
             element: <Login></Login>
+        },
+        {
+            path: '/update-user',
+            element: <PrivateRoute><UpdatedUser></UpdatedUser></PrivateRoute>
         }
       ]
     },

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Register = () => {
 
-  const {createUser, signInWithGoogle, signInWithGithub} = useContext(AuthContext);
+  const {createUser, signInWithGoogle, updateUserProfile, signInWithGithub} = useContext(AuthContext);
 
   const [registerError, setRegisterError] = useState('');
 
@@ -46,29 +46,35 @@ const Register = () => {
     }
 
     createUser(email, password)
-    .then(result => {
-      console.log(result.user);
-      toast.success('Congratulation! Sign Up Successful')
-      e.target.reset();
-      navigate('/');
+    .then(result =>{
+        console.log(result.user);
+        toast.success('Congratulation! Registration Successful')
+    // Update profile
+     updateUserProfile(name, photoURL)
+     .then( () => {
+    // Reset form field after Registration
+    e.target.reset();
+    // Go to home page after Registration
+        navigate('/'); 
+     })
     })
     .catch(error => {
       console.error(error);
-      if(error.code === 'auth/email-already-in-use'){
+     if(error.code === 'auth/email-already-in-use'){
         setRegisterError('The Email is already Used! Please provide a new Email!')
      }
      else{
       setRegisterError(error.message);
      }
-    })
-
-}
+  });
+    }
 
 const handleGoogleSignUp = () => {
   signInWithGoogle()
   .then(result => {
     console.log(result.user)
     toast.success('Google Sign Up Successful!')
+    navigate('/');
   })
   .catch(error => {
     console.error(error)
@@ -80,6 +86,7 @@ const handleGithubSignUp = () => {
   .then(result => {
     console.log(result.user)
     toast.success('Github Sign Up Successful!')
+    navigate('/');
   })
   .catch(error => {
     console.error(error)
@@ -87,7 +94,7 @@ const handleGithubSignUp = () => {
 }
 
   return (
-    <div className="bg-gray-800">
+    <div className="bg-gray-800  md:mt-0 mt-64">
       {" "}
       <div className="p-8 lg:w-1/2 mx-auto">
         {" "}
