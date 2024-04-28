@@ -94,7 +94,7 @@ const UpdatMyList = () => {
 <label className="block mt-4 mb-2 dark:text-white" htmlFor="cost">Average Cost</label>
 
     <input className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
-            type="text"
+            type="number"
             placeholder="Enter Cost"
             defaultValue={cost}
             id="cost"

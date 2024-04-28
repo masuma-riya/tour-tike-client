@@ -11,6 +11,7 @@ import UpdatedUser from "../Pages/UpdatedUser/UpdatedUser";
 import PrivateRoute from "./PrivateRoute";
 import SpotDetails from "../Pages/SpotDetails/SpotDetails";
 import UpdatMyList from "../Pages/UpdatMyList/UpdatMyList";
+import Redirect from "../Pages/Redirect/Redirect";
 
 const router = createBrowserRouter([
     {
@@ -26,7 +27,6 @@ const router = createBrowserRouter([
         {
             path: '/all-tourists-spot',
             element: <AllSpots></AllSpots>,
-            loader: () => fetch('http://localhost:5000/allSpot')
         },
         {
             path: '/spot-details/:id',
@@ -52,6 +52,10 @@ const router = createBrowserRouter([
         {
             path: '/update-user',
             element: <PrivateRoute><UpdatedUser></UpdatedUser></PrivateRoute>
+        },
+        {
+            path: '/countries/:country',
+            element: <Redirect></Redirect>,
         },
         {
             path: '/updateSpot/:id',

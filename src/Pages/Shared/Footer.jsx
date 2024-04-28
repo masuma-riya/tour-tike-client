@@ -1,265 +1,131 @@
 const Footer = () => {
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" className="sr-only">
-        Footer
-      </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
-            <img
-              className="h-20"
-              src="https://aaah0mnbncqtinas.public.blob.vercel-storage.com/FX5ATkass4-no-background-VmcZHSX7xE4ng29ATNphGUdb388fxH.png"
-              alt="Company name"
-            />
-            <p className="text-sm leading-6 text-gray-600">
-              Making football look better to the world and a more respecful
-              game.
-            </p>
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-gray-500">
-                <span className="sr-only">Facebook</span>
-                <svg
-                  className="h-6 w-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </a>
-              <a href="#" className="text-yellow-500 hover:text-gray-500">
-                <span className="sr-only">the team is on fire</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                  fill="currentColor"
-                  className="w-4 h-4"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M8.074.945A4.993 4.993 0 0 0 6 5v.032c.004.6.114 1.176.311 1.709.16.428-.204.91-.61.7a5.023 5.023 0 0 1-1.868-1.677c-.202-.304-.648-.363-.848-.058a6 6 0 1 0 8.017-1.901l-.004-.007a4.98 4.98 0 0 1-2.18-2.574c-.116-.31-.477-.472-.744-.28Zm.78 6.178a3.001 3.001 0 1 1-3.473 4.341c-.205-.365.215-.694.62-.59a4.008 4.008 0 0 0 1.873.03c.288-.065.413-.386.321-.666A3.997 3.997 0 0 1 8 8.999c0-.585.126-1.14.351-1.641a.42.42 0 0 1 .503-.235Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-blue-4      00">
-                <span className="sr-only">X</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                  fill="currentColor"
-                  className="w-4 h-4"
-                >
-                  <path d="M2.75 2a.75.75 0 0 0-.75.75v10.5a.75.75 0 0 0 1.5 0v-2.624l.33-.083A6.044 6.044 0 0 1 8 11c1.29.645 2.77.807 4.17.457l1.48-.37a.462.462 0 0 0 .35-.448V3.56a.438.438 0 0 0-.544-.425l-1.287.322C10.77 3.808 9.291 3.646 8 3a6.045 6.045 0 0 0-4.17-.457l-.34.085A.75.75 0 0 0 2.75 2Z" />
-                </svg>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-gray-500">
-                <span className="sr-only">GitHub</span>
-                <svg
-                  className="h-6 w-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </a>
-              <a href="#" className="text-gray-400 hover:text-gray-500">
-                <span className="sr-only">YouTube</span>
-                <svg
-                  className="h-6 w-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">
-                  Solutions
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Marketing
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Analytics
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Commerce
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Insights
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">
-                  Support
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Pricing
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Documentation
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Guides
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      API Status
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">
-                  Company
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Jobs
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Press
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Partners
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">
-                  Legal
-                </h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Claim
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Privacy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm leading-6 text-gray-600 hover:text-gray-900"
-                    >
-                      Terms
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+    <footer className="bg-slate-900">
+    <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="lg:flex lg:items-start lg:gap-8">
+        <div className="text-teal-600">
+          <svg className="h-8" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147C20.014 12.1842 19.9138 12.2477 19.81 12.3047H19.67C19.5662 12.2477 19.466 12.1842 19.37 12.1147C17.6924 10.9866 15.7166 10.3841 13.695 10.3841C11.6734 10.3841 9.6976 10.9866 8.02 12.1147C7.924 12.1842 7.8238 12.2477 7.72 12.3047H7.58C7.4762 12.2477 7.376 12.1842 7.28 12.1147C5.6171 10.9599 3.6343 10.3549 1.61 10.3847H0.41ZM23.62 16.6547C24.236 16.175 24.9995 15.924 25.78 15.9447H27.39V12.7347H25.78C24.4052 12.7181 23.0619 13.146 21.95 13.9547C21.3243 14.416 20.5674 14.6649 19.79 14.6649C19.0126 14.6649 18.2557 14.416 17.63 13.9547C16.4899 13.1611 15.1341 12.7356 13.745 12.7356C12.3559 12.7356 11.0001 13.1611 9.86 13.9547C9.2343 14.416 8.4774 14.6649 7.7 14.6649C6.9226 14.6649 6.1657 14.416 5.54 13.9547C4.4144 13.1356 3.0518 12.7072 1.66 12.7347H0V15.9447H1.61C2.39051 15.924 3.154 16.175 3.77 16.6547C4.908 17.4489 6.2623 17.8747 7.65 17.8747C9.0377 17.8747 10.392 17.4489 11.53 16.6547C12.1468 16.1765 12.9097 15.9257 13.69 15.9447C14.4708 15.9223 15.2348 16.1735 15.85 16.6547C16.9901 17.4484 18.3459 17.8738 19.735 17.8738C21.1241 17.8738 22.4799 17.4484 23.62 16.6547ZM23.62 22.3947C24.236 21.915 24.9995 21.664 25.78 21.6847H27.39V18.4747H25.78C24.4052 18.4581 23.0619 18.886 21.95 19.6947C21.3243 20.156 20.5674 20.4049 19.79 20.4049C19.0126 20.4049 18.2557 20.156 17.63 19.6947C16.4899 18.9011 15.1341 18.4757 13.745 18.4757C12.3559 18.4757 11.0001 18.9011 9.86 19.6947C9.2343 20.156 8.4774 20.4049 7.7 20.4049C6.9226 20.4049 6.1657 20.156 5.54 19.6947C4.4144 18.8757 3.0518 18.4472 1.66 18.4747H0V21.6847H1.61C2.39051 21.664 3.154 21.915 3.77 22.3947C4.908 23.1889 6.2623 23.6147 7.65 23.6147C9.0377 23.6147 10.392 23.1889 11.53 22.3947C12.1468 21.9165 12.9097 21.6657 13.69 21.6847C14.4708 21.6623 15.2348 21.9135 15.85 22.3947C16.9901 23.1884 18.3459 23.6138 19.735 23.6138C21.1241 23.6138 22.4799 23.1884 23.62 22.3947Z" fill="currentColor" />
+          </svg>
         </div>
-        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-500">
-            © 2020 Your Company, Inc. All rights reserved.
-          </p>
+        <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
+          <div className="col-span-2">
+            <div>
+              <h2 className="text-2xl font-bold text-white">Get the latest news!</h2>
+              <p className="mt-4 text-white">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non cupiditate quae nam
+                molestias.
+              </p>
+            </div>
+          </div>
+          <div className="col-span-2 lg:col-span-3 lg:flex lg:items-end">
+            <form className="w-full bg-white rounded-xl">
+              <label htmlFor="UserEmail" className="sr-only"> Email </label>
+              <div className="p-2 focus-within:ring sm:flex sm:items-center sm:gap-4">
+                <input type="email" id="UserEmail" placeholder="john@rhcp.com" className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm" />
+                <button className="mt-1 rounded-xl w-full bg-teal-500 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-teal-600 sm:mt-0 sm:w-auto sm:shrink-0">
+                  Sign Up
+                </button>
+              </div>
+            </form>
+          </div>
+          <div className="col-span-2 sm:col-span-1">
+            <p className="font-medium text-white">Services</p>
+            <ul className="mt-6 space-y-4 text-sm">
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> 1on1 Coaching </a>
+              </li>
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> Company Review </a>
+              </li>
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> Accounts Review </a>
+              </li>
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> HR Consulting </a>
+              </li>
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> SEO Optimisation </a>
+              </li>
+            </ul>
+          </div>
+          <div className="col-span-2 sm:col-span-1">
+            <p className="font-medium text-white">Company</p>
+            <ul className="mt-6 space-y-4 text-sm">
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> About </a>
+              </li>
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> Meet the Team </a>
+              </li>
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> Accounts Review </a>
+              </li>
+            </ul>
+          </div>
+          <div className="col-span-2 sm:col-span-1">
+            <p className="font-medium text-white">Helpful Links</p>
+            <ul className="mt-6 space-y-4 text-sm">
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> Contact </a>
+              </li>
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> FAQs </a>
+              </li>
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> Live Chat </a>
+              </li>
+            </ul>
+          </div>
+          <div className="col-span-2 sm:col-span-1">
+            <p className="font-medium text-white">Legal</p>
+            <ul className="mt-6 space-y-4 text-sm">
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> Accessibility </a>
+              </li>
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> Returns Policy </a>
+              </li>
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> Refund Policy </a>
+              </li>
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> Hiring Statistics </a>
+              </li>
+            </ul>
+          </div>
+          <div className="col-span-2 sm:col-span-1">
+            <p className="font-medium text-white">Downloads</p>
+            <ul className="mt-6 space-y-4 text-sm">
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> Marketing Calendar </a>
+              </li>
+              <li>
+                <a href="#" className="text-white transition hover:opacity-75"> SEO Infographics </a>
+              </li>
+            </ul>
+          </div>
+         
         </div>
       </div>
-    </footer>
+      <div className="mt-8 border-t border-white pt-8">
+        <div className="sm:flex sm:justify-between">
+          <p className="text-xs text-white">© 2022. Company Name. All rights reserved.</p>
+          <ul className="mt-8 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end">
+            <li>
+              <a href="#" className="text-white transition hover:opacity-75"> Terms &amp; Conditions </a>
+            </li>
+            <li>
+              <a href="#" className="text-white transition hover:opacity-75"> Privacy Policy </a>
+            </li>
+            <li>
+              <a href="#" className="text-white transition hover:opacity-75"> Cookies </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
   );
 };
 

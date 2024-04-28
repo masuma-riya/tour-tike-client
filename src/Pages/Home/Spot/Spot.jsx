@@ -1,30 +1,25 @@
 import { Link } from "react-router-dom";
 
 const Spot = ({spot}) => {
-    const {country, _id} = spot
+    const {country, _id, img, description} = spot
     return (
-        <div>
-           <div className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
-        <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-          <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="card-image" />
-        </div>
-        <div className="p-6">
-          <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-            {country}
-          </h5>
-          <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-            The place is close to Barceloneta Beach and bus stop just 2 min by walk
-            and near to "Naviglio" where you can enjoy the main night life in
-            Barcelona.
-          </p>
-        </div>
-        <div className="p-6 pt-0">
-        <Link to={`/spot-details/${_id}`}> <button className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
-                        Read More
-                      </button></Link>
-        </div>
+      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
+        <img className="rounded-t-lg" src={img} alt="" />
+      </a>
+      <div className="p-5">
+        <a href="#">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{country}</h5>
+        </a>
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
+        <Link to={`/spot-details/${_id}`}>  <button className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+         View Details
+          <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M1 5h12m0 0L9 1m4 4L9 9" />
+          </svg>
+        </button> </Link>
       </div>
-        </div>
+    </div>
     );
 };
 
