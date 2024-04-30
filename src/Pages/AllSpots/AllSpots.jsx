@@ -34,20 +34,20 @@ if(loading){
 
     return (
        <>
-       <details className="dropdown">
-  <summary className="m-1 btn">Filter</summary>
-  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-    <button onClick={() => setFilter('asc')} className="btn">Ascending</button>
-    <button onClick={() => setFilter('desc')} className="btn">Decending</button>
+       <details className="dropdown mt-10 mb-8 flex justify-center rounded-2xl w-5/12 m-auto">
+  <summary className="m-1 text-2xl rounded-2xl font-bold italic p-4 text-center text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl">Filter</summary>
+  <ul className="p-2  menu dropdown-content z-[1] shadow-xl rounded-box w-52">
+    <button onClick={() => setFilter('asc')} className="btn text-xl mb-2">Ascending</button>
+    <button onClick={() => setFilter('desc')} className="btn text-xl">Decending</button>
   </ul>
 </details>
 
-<div className="grid lg:grid-cols-3 md:grid-cols-2 mx-8 gap-5">
+<div className="grid lg:grid-cols-3 md:grid-cols-2 mx-8 gap-10">
   {
      touristSpot?.map(spot => (
       <div key={spot._id} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <a href="#">
-        <img className="rounded-t-lg" src={spot.img} alt="" />
+        <img className="rounded-t-lg w-full h-56" src={spot.img} alt="" />
       </a>
       <div className="p-5">
        

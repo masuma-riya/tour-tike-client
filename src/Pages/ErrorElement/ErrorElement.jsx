@@ -10,7 +10,7 @@ const ErrorElement = () => {
         <p className="text-gray-500 mt-4 pb-4 border-b-2 text-center">
           Sorry, the page you are looking for could not be found.</p>
 
-        <a href="#" className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 mt-6 rounded">
+        <a className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 mt-6 rounded">
 
     <GoArrowLeft className="text-white text-xl"></GoArrowLeft>
     <Link className="text-lg text-white" to="/">Back to Home</Link>
