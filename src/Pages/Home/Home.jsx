@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Country from "./Country";
 import Banner from "../Banner/Banner";
 import ExtraSection from "../../ExtraSection/ExtraSection";
+import Extra from "../../ExtraSection/Extra";
 
 const Home = () => {
 
@@ -41,10 +42,7 @@ const Home = () => {
             sixSpots.map(spot => <Spot key={spot._id} spot={spot}></Spot> )
             }
         </div>
-{/* country */}
-        <div>
-         
-        </div>
+      <Extra></Extra>
        </>
     );
 };

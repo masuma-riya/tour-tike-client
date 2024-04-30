@@ -94,13 +94,7 @@ const Navbar = () => {
           >
             Home
           </NavLink>
-          <NavLink
-            className={({isActive}) => isActive? 'lg:h-10 text-xl font-extrabold text-yellow-400 leading-10' : 'lg:h-10 text-white font-extrabold leading-10 text-xl'} 
-           
-            to="/update-user"
-          >
-            Update Profile
-          </NavLink>
+          
 
           <NavLink
         className={({isActive}) => isActive? 'lg:h-10 text-xl font-extrabold text-yellow-400 leading-10' : 'lg:h-10 text-white font-extrabold leading-10 text-xl'} 
