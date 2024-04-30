@@ -3,6 +3,7 @@ import Spot from "./Spot/Spot";
 import { useEffect, useState } from "react";
 import Country from "./Country";
 import Banner from "../Banner/Banner";
+import ExtraSection from "../../ExtraSection/ExtraSection";
 
 const Home = () => {
 
@@ -27,11 +28,13 @@ const Home = () => {
       <Banner></Banner>
        </div>
 
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 w-full md:gap-8 space-y-8 md:space-y-0 p-6">
+    <div className="grid lg:grid-cols-3 h-full md:grid-cols-2 w-full md:gap-8 space-y-8 md:space-y-0 p-6">
         {
             countries.map(country => <Country key={country._id} country={country} ></Country> )
         }
     </div>
+
+    <ExtraSection></ExtraSection>
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 w-full md:gap-8 space-y-8 md:space-y-0 p-6">
             {
