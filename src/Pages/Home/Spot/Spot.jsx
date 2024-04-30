@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import { SlLocationPin } from "react-icons/sl";
 import { PiMoneyLight } from "react-icons/pi";
+import { Fade } from "react-awesome-reveal";
 
 const Spot = ({spot}) => {
     const {country, _id, img, description, spotName, location, cost, season} = spot
     return (
-      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+     <Fade>
+       <div className="max-w-sm h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <a href="#">
         <img className="rounded-t-lg h-64" src={img} alt="" />
       </a>
@@ -36,6 +38,7 @@ const Spot = ({spot}) => {
         </button> </Link>
       </div>
     </div>
+     </Fade>
     );
 };
 

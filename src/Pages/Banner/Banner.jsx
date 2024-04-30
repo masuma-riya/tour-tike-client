@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import '../../../node_modules/swiper/swiper-bundle.min.css';
 import { Navigation } from 'swiper/modules';
+import { Typewriter } from 'react-simple-typewriter'
 
 
 import slider1 from '../../assets/images/spot4.avif';
@@ -30,7 +31,13 @@ const Banner = () => {
             <div className='text-center h-full w-full flex justify-center items-center'>
                 <div className='mt-12 space-y-4'>
   <h1 className='text-3xl italic font-normal text-slate-100'>Dive Into</h1>
-  <h1 className='text-[57px] font-bold text-white'>Your Gateway to Global Wonders!</h1>
+  <h1 className='text-[57px] font-bold text-white'>Your Gateway to Global {' '}<Typewriter words={[ 'Wonders', 'With Us']}
+                loop={true}
+                cursor
+                cursorStyle='_'
+                typeSpeed={80}
+                deleteSpeed={50}
+                delaySpeed={1200}></Typewriter> </h1>
 
   <div>
   <p className='text-xl font-medium text-yellow-500'>Every Click Unveils a New Adventure!</p>
@@ -123,7 +130,7 @@ Explore now
   <button type="button" class="text-slate-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-extrabold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl">
 Explore now
 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+<path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
 </svg>
 </button>
 

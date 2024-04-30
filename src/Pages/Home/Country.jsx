@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
 
 const Country = ({country}) => {
     const { name, image, description } = country || {}
     return (
-        <Link to={`/countries/${name}`}><div className="card h-full bg-base-100 shadow-xl">
+       <Fade>
+
+<Link to={`/countries/${name}`}><div className="card h-full bg-base-100 shadow-xl">
         <figure><img className="h-72" src={image} alt="Shoes" /></figure>
         <div className="card-body">
 
@@ -18,6 +21,7 @@ const Country = ({country}) => {
 
         </div>
       </div></Link>
+       </Fade>
     );
 };
 
