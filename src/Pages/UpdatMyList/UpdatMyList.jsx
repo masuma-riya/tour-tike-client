@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 const UpdatMyList = () => {
 
     const myLists = useLoaderData();
-    const { _id, spotName, location, cost, description, travelTime, visitors, season, img} = myLists;
+    const { _id, spotName, location, cost, description, travelTime, visitors, season, img, country} = myLists;
 
     const handleUpdateProduct = event => {
         event.preventDefault();
@@ -69,16 +69,16 @@ const UpdatMyList = () => {
 
 <label className="block mb-2 dark:text-white" htmlFor="country">Country Name</label>
 
-    <select name="country" id="country"
+    <select defaultValue={country} name="country" id="country"
     className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
     type="text" placeholder="Select Country">
 
-        <option value="Bangladesh">Bangladesh</option>
-        <option value="Thailand">Thailand</option>
-        <option value=" Indonesia">Indonesia</option>
-        <option value="Malaysia">Malaysia</option>
-        <option value="Vietnam">Vietnam</option>
-        <option value="Cambodia">Cambodia</option>
+        <option>Bangladesh</option>
+        <option>Thailand</option>
+        <option>Indonesia</option>
+        <option>Malaysia</option>
+        <option>Vietnam</option>
+        <option>Cambodia</option>
 </select>
 
 <label className="block mt-5 mb-2 dark:text-white" htmlFor="location">Location

@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { SlLocationPin } from "react-icons/sl";
+import { PiMoneyLight } from "react-icons/pi";
+
 
 const AllSpots = () => {
 
@@ -38,35 +41,45 @@ if(loading){
     <button onClick={() => setFilter('desc')} className="btn">Decending</button>
   </ul>
 </details>
-        <div className="grid grid-cols-3 mt-8 gap-3 text-center px-2 mx-auto">
-            {
-                touristSpot?.map(spot => (
-                    <div key={spot._id} className="relative flex flex-col mt-6 text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-96">
-                    <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg bg-clip-border rounded-xl bg-blue-gray-500 shadow-blue-gray-500/40">
-                      <img src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="card-image" />
-                    </div>
-                    <div className="p-6">
-                      <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                        {spot.country}
-                      </h5>
-                      <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-                        The place is close to Barceloneta Beach and bus stop just 2 min by walk
-                        and near to "Naviglio" where you can enjoy the main night life in
-                        Barcelona.
-                      </p>
-                      <h1 className="text-5xl">{spot.cost}</h1>
-                    </div>
-                    <div className="p-6 pt-0">
-                    <Link to={`/spot-details/${spot._id}`}> <button className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
-                        View Dwtails
+
+<div className="grid lg:grid-cols-3 md:grid-cols-2 mx-8 gap-5">
+  {
+     touristSpot?.map(spot => (
+      <div key={spot._id} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
+        <img className="rounded-t-lg" src={spot.img} alt="" />
+      </a>
+      <div className="p-5">
+       
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{spot.country}</h5>
+          <h5 className="mb-2 text-xl mt-3 font-semibold tracking-tight text-gray-700 dark:text-white">Spot Name: {spot.spotName}</h5>
+       
+ <div className="flex gap-1 mt-4 mb-2">
+  <SlLocationPin className="text-2xl text-red-600"></SlLocationPin>
+  <p className="text-xl">{spot.location}</p>
+ </div>
+
+ <div className="flex gap-2 mt-4 mb-2">
+  <PiMoneyLight className="text-2xl text-green-600"></PiMoneyLight>
+  <p className="text-xl">{spot.cost} Thousands</p>
+ </div>
+
+ <p className="text-xl font-bold mb-6 mt-3">Season: {spot.season}</p>
+
+
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{spot.description}</p>
+        <Link to={`/spot-details/${spot._id}`}> <button className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none" type="button">
+                        View Details
                       </button></Link>
-                    </div>
-                  </div>
-                ))
-            }
-        </div>
+      </div>
+    </div>
+     ))
+  }
+</div>
+      
        </>
     );
 };
 
 export default AllSpots;
+
