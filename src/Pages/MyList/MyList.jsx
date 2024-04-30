@@ -9,7 +9,7 @@ const MyList = () => {
     console.log(user);
     const [lists, setLists] = useState([]);
     useEffect(() => {
-    fetch(`http://localhost:5000/myList/${user?.email}`)
+    fetch(`https://spots-server.vercel.app/myList/${user?.email}`)
     .then(res => res.json())
     .then(data => {
         setLists(data);
@@ -29,7 +29,7 @@ const MyList = () => {
         }).then((result) => {
           if (result.isConfirmed) {
         
-            fetch(`http://localhost:5000/allSpot/${id}`, {
+            fetch(`https://spots-server.vercel.app/allSpot/${id}`, {
               method: 'DELETE'
             })
             .then(res => res.json())

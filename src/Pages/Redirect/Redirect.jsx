@@ -13,7 +13,7 @@ const Redirect = () => {
         const fetchData = async() => {
             setLoading(true);
             try {
-               const response = await fetch(`http://localhost:5000/allSpot/countries/${country}`) 
+               const response = await fetch(`https://spots-server.vercel.app/allSpot/countries/${country}`) 
                const data = await response.json();
                console.log(data);
                setTouristSpot(data)

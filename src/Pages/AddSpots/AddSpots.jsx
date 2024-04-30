@@ -33,7 +33,7 @@ const handleAddProduct = event => {
         console.log("New Spot:", newSpot);
 
     // send data to server
-    fetch('http://localhost:5000/addSpot', {
+    fetch('https://spots-server.vercel.app/addSpot', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

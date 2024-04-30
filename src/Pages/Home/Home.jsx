@@ -14,7 +14,7 @@ const Home = () => {
     const sixSpots = spots.slice(0, 6);
 
     useEffect(() => {
-      fetch('http://localhost:5000/countries')
+      fetch('https://spots-server.vercel.app/countries')
       .then(res => res.json())
       .then(data => {
         setCountries(data)

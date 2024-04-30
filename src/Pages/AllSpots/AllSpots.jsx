@@ -15,7 +15,7 @@ const AllSpots = () => {
     const fetchData = async() => {
         setLoading(true);
         try {
-const response = await fetch(`http://localhost:5000/allSpot/?cost=${filter}`) 
+const response = await fetch(`https://spots-server.vercel.app/allSpot/?cost=${filter}`) 
            const data = await response.json();
            console.log(data);
            setTouristSpot(data)

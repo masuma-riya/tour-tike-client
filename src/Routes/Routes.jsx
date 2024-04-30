@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            loader: () => fetch('http://localhost:5000/allSpot')
+            loader: () => fetch('https://spots-server.vercel.app/allSpot')
         },
         {
             path: '/all-tourists-spot',
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         {
             path: '/spot-details/:id',
             element: <PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/allSpot/${params.id}`)
+            loader: ({params}) => fetch(`https://spots-server.vercel.app/allSpot/${params.id}`)
         },
         {
             path: '/add-tourists-spot',
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
         {
             path: '/updateSpot/:id',
             element: <UpdatMyList></UpdatMyList>,
-    loader: ({params}) => fetch(`http://localhost:5000/allSpot/${params.id}`)
+    loader: ({params}) => fetch(`https://spots-server.vercel.app/allSpot/${params.id}`)
         }
       ]
     },
