@@ -9,6 +9,9 @@ import MyList from "../Pages/MyList/MyList";
 import ErrorElement from "../Pages/ErrorElement/ErrorElement";
 import UpdatedUser from "../Pages/UpdatedUser/UpdatedUser";
 import PrivateRoute from "./PrivateRoute";
+import SpotDetails from "../Pages/SpotDetails/SpotDetails";
+import UpdatMyList from "../Pages/UpdatMyList/UpdatMyList";
+import Redirect from "../Pages/Redirect/Redirect";
 
 const router = createBrowserRouter([
     {
@@ -18,19 +21,25 @@ const router = createBrowserRouter([
       children: [
         {
             path: '/',
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: () => fetch('http://localhost:5000/allSpot')
         },
         {
             path: '/all-tourists-spot',
-            element: <AllSpots></AllSpots>
+            element: <AllSpots></AllSpots>,
+        },
+        {
+            path: '/spot-details/:id',
+            element: <PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>,
+            loader: ({params}) => fetch(`http://localhost:5000/allSpot/${params.id}`)
         },
         {
             path: '/add-tourists-spot',
-            element: <AddSpots></AddSpots>
+            element: <PrivateRoute><AddSpots></AddSpots></PrivateRoute>
         },
         {
-            path: '/my-list',
-            element: <MyList></MyList>
+            path: '/myList',
+            element: <PrivateRoute><MyList></MyList></PrivateRoute>
         },
         {
             path: '/sign-up',
@@ -43,6 +52,15 @@ const router = createBrowserRouter([
         {
             path: '/update-user',
             element: <PrivateRoute><UpdatedUser></UpdatedUser></PrivateRoute>
+        },
+        {
+            path: '/countries/:country',
+            element: <Redirect></Redirect>,
+        },
+        {
+            path: '/updateSpot/:id',
+            element: <UpdatMyList></UpdatMyList>,
+    loader: ({params}) => fetch(`http://localhost:5000/allSpot/${params.id}`)
         }
       ]
     },
