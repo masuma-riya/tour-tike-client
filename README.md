@@ -15,6 +15,10 @@ Navigate effortlessly through our intuitive interface, designed for seamless bro
 - **Interactive Maps**: Plan and visualize itineraries with interactive mapping.
 - **Community Engagement**: Share and discover travel tips within a vibrant online community.
 
+## Technologies used
+- **Frontend**: ReactJS, Firebase for hostiung and authentication, Html, Tailwind CSS, React Helmet Async, React toastify.
+- **Backend**: Node.js, Express.js, MongoDB for database.
+
 ## Local Setup
 To run Tour Vibes locally, follow these steps :
 
