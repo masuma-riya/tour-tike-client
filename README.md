@@ -18,7 +18,7 @@ Navigate effortlessly through our intuitive interface, designed for seamless bro
 ## Local Setup
 To run Tour Vibes locally, follow these steps :
 
-1. Clone the repository : [git clone https://github.com/masuma-riya/tour-tike-client.git](https://github.com/masuma-riya/tour-tike-client.git)
+1. Clone the repository : git clone [https://github.com/masuma-riya/tour-tike-client.git](https://github.com/masuma-riya/tour-tike-client.git)
 2. Navigate to the project directory
 3. Install dependencies by npm i
    
