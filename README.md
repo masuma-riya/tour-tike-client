@@ -1,6 +1,6 @@
 # Tour Vibes
 
-**Live Site URL** : [Tour Vibes](https://tour-vibes.web.app/)
+**Live Site URL** : [Tour Vibes](https://assignment-ten-2e1ab.web.app/)
 
 **Server Side API** : [Tour Vibes Server](https://spots-server.vercel.app)
 
@@ -21,10 +21,11 @@ To run Tour Vibes locally, follow these steps :
 1. Clone the repository : [git clone https://github.com/masuma-riya/tour-tike-client.git](https://github.com/masuma-riya/tour-tike-client.git)
 2. Navigate to the project directory
 3. Install dependencies by npm i
+   
 4. Set up Firebase :-
 - Create a Firebase project and obtain credentials.
 - Set up Firestore database for storing data.
-
+  
 5. Configure Firebase credentials :-
 - Add Firebase configuration details in the project.
 
